@@ -1,4 +1,7 @@
+// * Packages
 import 'package:flutter/material.dart';
+// * Screens
+import './screens/authentication-screens/launch_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,11 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'Laege App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Læge App'),
-        ),
-      ),
+      initialRoute: LaunchScreen.routeName,
+      routes: {
+        LaunchScreen.routeName: (context) => LaunchScreen(),
+      },
     );
   }
 }
