@@ -1,12 +1,11 @@
-// * Dart
-import 'dart:ui';
 // * Packages
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 // * Components
 import '../../components/launch_screen_components/top_app_title.dart';
 import '../../components/launch_screen_components/launch_screen_text.dart';
 import '../../components/launch_screen_components/launch_screen_button.dart';
+// * Screens
+import './register_screen.dart';
 
 class LaunchScreen extends StatelessWidget {
   static const routeName = '/launch-screen';
@@ -28,6 +27,7 @@ class LaunchScreen extends StatelessWidget {
           ),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TopAppTitle(),
             SizedBox(height: screenSize.height * 0.12),
@@ -46,7 +46,9 @@ class LaunchScreen extends StatelessWidget {
               backgroundColor: Color(0xffffffff),
               text: 'Opret bruger',
               textColor: Color(0xff95CFDD),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RegisterScreen.routeName);
+              },
             ),
           ],
         ),
