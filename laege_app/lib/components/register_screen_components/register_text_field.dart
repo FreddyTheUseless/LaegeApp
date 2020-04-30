@@ -7,7 +7,7 @@ class RegisterTextField extends StatelessWidget {
     @required this.labelText,
     @required this.maxLength,
     @required this.keyboardType,
-    @required this.controller,
+    @required this.textController,
     this.obscureText = false,
   });
 
@@ -16,14 +16,14 @@ class RegisterTextField extends StatelessWidget {
   final int maxLength;
   final TextInputType keyboardType;
   final bool obscureText;
-  final TextEditingController controller;
+  final TextEditingController textController;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: screenSize.width * 0.8,
       child: TextField(
-        controller: controller,
+        controller: textController,
         decoration: InputDecoration(
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
