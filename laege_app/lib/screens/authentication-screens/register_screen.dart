@@ -10,10 +10,10 @@ import '../../components/register_screen_components/register_button.dart';
 class RegisterScreen extends StatelessWidget {
   static const routeName = '/register-screen';
 
-  TextEditingController cprController;
-  TextEditingController tlfController;
-  TextEditingController usrController;
-  TextEditingController pwController;
+  TextEditingController cprController = TextEditingController();
+  TextEditingController tlfController = TextEditingController();
+  TextEditingController usrController = TextEditingController();
+  TextEditingController pwController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class RegisterScreen extends StatelessWidget {
               keyboardType: TextInputType.number,
               labelText: 'CPR-Nummer',
               maxLength: 10,
-              controller: cprController,
+              textController: cprController,
             ),
             SizedBox(height: screenSize.height * 0.03),
             RegisterTextField(
@@ -52,7 +52,7 @@ class RegisterScreen extends StatelessWidget {
               keyboardType: TextInputType.number,
               labelText: 'Tlf-Nummer',
               maxLength: 8,
-              controller: tlfController,
+              textController: tlfController,
             ),
             SizedBox(height: screenSize.height * 0.03),
             RegisterTextField(
@@ -60,7 +60,7 @@ class RegisterScreen extends StatelessWidget {
               keyboardType: TextInputType.text,
               labelText: 'Brugernavn',
               maxLength: 20,
-              controller: usrController,
+              textController: usrController,
             ),
             SizedBox(height: screenSize.height * 0.03),
             RegisterTextField(
@@ -69,7 +69,7 @@ class RegisterScreen extends StatelessWidget {
               labelText: 'Adgangskode',
               maxLength: 20,
               obscureText: true,
-              controller: pwController,
+              textController: pwController,
             ),
             SizedBox(height: screenSize.height * 0.2),
             RegisterButton(
