@@ -38,11 +38,17 @@ class SelectButton extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text(
-              text,
-              style: TextStyle(
-                color: Color(0xFF6F909F),
-                fontSize: 20.0,
+            Hero(
+              tag: text,
+              child: Material(
+                color: Colors.transparent,
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    color: Color(0xFF6F909F),
+                    fontSize: 20.0,
+                  ),
+                ),
               ),
             ),
             Icon(

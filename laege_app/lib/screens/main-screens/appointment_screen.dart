@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 // * Components
 import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
+import 'package:laege_app/components/main_screen_components/appointment_title.dart';
+import 'package:laege_app/components/main_screen_components/doctor_appointment.dart';
 
 class AppointmentScreen extends StatelessWidget {
   static const routeName = '/Apointment-screen';
@@ -20,12 +22,28 @@ class AppointmentScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TopAppTitle(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Text('Aftaler'),
-              ],
-            )
+            AppointmentTitle(),
+            SizedBox(height: screenSize.height * 0.1),
+            DoctorAppointment(
+              screenSize: screenSize,
+              name: 'Mie Xing',
+              imageUrl:
+                  'https://cdn.pixabay.com/photo/2017/01/29/21/16/nurse-2019420_960_720.jpg',
+            ),
+            SizedBox(height: screenSize.height * 0.05),
+            DoctorAppointment(
+              screenSize: screenSize,
+              name: 'Mads Sørensen',
+              imageUrl:
+                  'https://cdn.pixabay.com/photo/2017/05/23/17/12/doctor-2337835_960_720.jpg',
+            ),
+            SizedBox(height: screenSize.height * 0.05),
+            DoctorAppointment(
+              screenSize: screenSize,
+              name: 'Sarah Jensen',
+              imageUrl:
+                  'https://cdn.pixabay.com/photo/2019/12/06/13/40/anesthesia-4677401_960_720.jpg',
+            ),
           ],
         ),
       ),
