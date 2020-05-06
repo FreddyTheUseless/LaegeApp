@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // * Components
 import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
 import 'package:laege_app/components/main_screen_components/appointment_title.dart';
+// * Screens
+import 'package:laege_app/screens/main-screens/rapport_screen_all.dart';
 
 class RapportScreen extends StatelessWidget {
   static const routeName = '/rapport-screen';
@@ -29,31 +31,39 @@ class RapportScreen extends StatelessWidget {
                 ),
                 Row(
                   children: <Widget>[
-                    Text(
-                      'Seneste',
-                      style: TextStyle(
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                        color: Color(0xffadadad),
-                      ),
-                    ),
-                    SizedBox(width: screenSize.width * 0.01),
                     Container(
-                      width: screenSize.width * 0.13,
+                      width: screenSize.width * 0.2,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
                         color: Color(0xff6f909f),
                       ),
                       child: Center(
                         child: Text(
-                          'Alle',
+                          'Seneste',
                           style: TextStyle(
                             fontFamily: "Helvetica Neue",
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
                             color: Color(0xffffffff),
                           ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: screenSize.width * 0.01),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacementNamed(
+                          context,
+                          RapportScreenAll.routeName,
+                        );
+                      },
+                      child: Text(
+                        'Alle',
+                        style: TextStyle(
+                          fontFamily: "Helvetica Neue",
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
+                          color: Color(0xffadadad),
                         ),
                       ),
                     ),
