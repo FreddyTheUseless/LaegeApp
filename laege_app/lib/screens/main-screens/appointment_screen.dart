@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
 import 'package:laege_app/components/main_screen_components/appointment_title.dart';
 import 'package:laege_app/components/main_screen_components/doctor_appointment.dart';
+// * Screens
+import '../appointment-screens/about_doctor_screen.dart';
 
 class AppointmentScreen extends StatelessWidget {
   static const routeName = '/Apointment-screen';
@@ -29,7 +31,16 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Mie Xing',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2017/01/29/21/16/nurse-2019420_960_720.jpg',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutDoctorScreen(
+                      doctorName: 'Mie Xing',
+                    ),
+                  ),
+                );
+              },
             ),
             SizedBox(height: screenSize.height * 0.05),
             DoctorAppointment(
@@ -37,7 +48,16 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Mads Sørensen',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2017/05/23/17/12/doctor-2337835_960_720.jpg',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutDoctorScreen(
+                      doctorName: 'Mads Sørensen',
+                    ),
+                  ),
+                );
+              },
             ),
             SizedBox(height: screenSize.height * 0.05),
             DoctorAppointment(
@@ -45,7 +65,16 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Sarah Jensen',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2019/12/06/13/40/anesthesia-4677401_960_720.jpg',
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AboutDoctorScreen(
+                      doctorName: 'Sarah Jensen',
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),
