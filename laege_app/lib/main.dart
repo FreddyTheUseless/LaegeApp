@@ -7,6 +7,7 @@ import './screens/authentication-screens/login_screen.dart';
 import './screens/main-screens/main_screen.dart';
 import './screens/main-screens/appointment_screen.dart';
 import './screens/main-screens/rapport_screen.dart';
+import './screens/doctor-screens/doctor_home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Laege App',
       debugShowCheckedModeBanner: false,
-      initialRoute: LaunchScreen.routeName,
+      initialRoute: DoctorHomeScreen.routeName,
       theme: ThemeData.dark(),
       routes: {
         LaunchScreen.routeName: (context) => LaunchScreen(),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         MainScreen.routeName: (context) => MainScreen(),
         AppointmentScreen.routeName: (context) => AppointmentScreen(),
         RapportScreen.routeName: (context) => RapportScreen(),
+        DoctorHomeScreen.routeName: (context) => DoctorHomeScreen(),
       },
     );
   }
