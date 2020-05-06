@@ -5,6 +5,8 @@ import './screens/authentication-screens/launch_screen.dart';
 import './screens/authentication-screens/register_screen.dart';
 import './screens/authentication-screens/login_screen.dart';
 import './screens/main-screens/main_screen.dart';
+import './screens/main-screens/appointment_screen.dart';
+import './screens/main-screens/rapport_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +24,8 @@ class MyApp extends StatelessWidget {
         RegisterScreen.routeName: (context) => RegisterScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
         MainScreen.routeName: (context) => MainScreen(),
+        AppointmentScreen.routeName: (context) => AppointmentScreen(),
+        RapportScreen.routeName: (context) => RapportScreen(),
       },
     );
   }
