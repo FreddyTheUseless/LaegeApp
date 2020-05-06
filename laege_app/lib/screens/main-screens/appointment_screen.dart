@@ -23,7 +23,7 @@ class AppointmentScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Text('Aftaler')
+                Text('Aftaler'),
               ],
             )
           ],
