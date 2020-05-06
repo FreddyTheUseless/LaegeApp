@@ -2,6 +2,13 @@
 import 'package:flutter/material.dart';
 
 class AppointmentTitle extends StatelessWidget {
+
+  AppointmentTitle({
+    this.title = 'Aftaler',
+  });
+
+  final String title;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,7 +19,7 @@ class AppointmentTitle extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: Text(
-              'Aftaler',
+              title,
               style: TextStyle(
                 fontSize: 23.0,
                 color: Color(0xFF6F909F),
