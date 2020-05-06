@@ -2,16 +2,8 @@
 import 'package:http/http.dart' as http;
 
 class DataBaseHandler {
-  Future<void> doSomething() async {
-
-  }
-  Future<void> doSomethingElse() async {
-    
-  }
-  Future<void> doThis() async {
-    
-  }
-  Future<void> doThat() async {
-    
-  }
+  Future<void> sendToDatabase() async {}
+  Future<void> retrieveFromDatabase() async {}
+  Future<void> updateDatabase() async {}
+  Future<void> deleteFromDatabase() async {}
 }

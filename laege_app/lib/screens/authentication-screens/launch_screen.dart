@@ -6,6 +6,7 @@ import '../../components/launch_screen_components/launch_screen_text.dart';
 import '../../components/launch_screen_components/launch_screen_button.dart';
 // * Screens
 import './register_screen.dart';
+import './login_screen.dart';
 
 class LaunchScreen extends StatelessWidget {
   static const routeName = '/launch-screen';
@@ -38,7 +39,9 @@ class LaunchScreen extends StatelessWidget {
               backgroundColor: Color(0x49747474),
               text: 'Log in',
               textColor: Color(0xffffffff),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, LoginScreen.routeName);
+              },
             ),
             SizedBox(height: screenSize.height * 0.025),
             LaunchScreenButton(

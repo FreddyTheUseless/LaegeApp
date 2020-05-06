@@ -1,19 +1,17 @@
 // * Packages
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 // * Components
-import '../../components/launch_screen_components/top_app_title.dart';
-import '../../components/register_screen_components/register_screen_text.dart';
-import '../../components/register_screen_components/register_text_field.dart';
-import '../../components/register_screen_components/register_button.dart';
+import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
+import 'package:laege_app/components/login_screen_components/login_button.dart';
+import 'package:laege_app/components/login_screen_components/login_screen_text.dart';
+import 'package:laege_app/components/register_screen_components/register_text_field.dart';
 // * Screens
 import '../main-screens/main_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
-  static const routeName = '/register-screen';
+class LoginScreen extends StatelessWidget {
+  static const routeName = '/login-screen';
 
   TextEditingController cprController = TextEditingController();
-  TextEditingController tlfController = TextEditingController();
   TextEditingController usrController = TextEditingController();
   TextEditingController pwController = TextEditingController();
 
@@ -39,7 +37,7 @@ class RegisterScreen extends StatelessWidget {
           children: <Widget>[
             TopAppTitle(),
             SizedBox(height: screenSize.height * 0.05),
-            RegisterScreenText(),
+            LoginScreenText(),
             SizedBox(height: screenSize.height * 0.15),
             RegisterTextField(
               screenSize: screenSize,
@@ -47,14 +45,6 @@ class RegisterScreen extends StatelessWidget {
               labelText: 'CPR-Nummer',
               maxLength: 10,
               textController: cprController,
-            ),
-            SizedBox(height: screenSize.height * 0.03),
-            RegisterTextField(
-              screenSize: screenSize,
-              keyboardType: TextInputType.number,
-              labelText: 'Tlf-Nummer',
-              maxLength: 8,
-              textController: tlfController,
             ),
             SizedBox(height: screenSize.height * 0.03),
             RegisterTextField(
@@ -74,12 +64,11 @@ class RegisterScreen extends StatelessWidget {
               textController: pwController,
             ),
             SizedBox(height: screenSize.height * 0.2),
-            RegisterButton(
+            LoginButton(
               screenSize: screenSize,
               onTap: () {
                 // * Do something
                 print('CPR:' + cprController.text);
-                print('Tlf:' + tlfController.text);
                 print('User:' + usrController.text);
                 print('Password:' + pwController.text);
                 Navigator.pushReplacementNamed(context, MainScreen.routeName);

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // * Screens
 import './screens/authentication-screens/launch_screen.dart';
 import './screens/authentication-screens/register_screen.dart';
+import './screens/authentication-screens/login_screen.dart';
+import './screens/main-screens/main_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,10 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Laege App',
       debugShowCheckedModeBanner: false,
-      initialRoute: RegisterScreen.routeName,
+      initialRoute: LaunchScreen.routeName,
+      theme: ThemeData.dark(),
       routes: {
         LaunchScreen.routeName: (context) => LaunchScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        MainScreen.routeName: (context) => MainScreen(),
       },
     );
   }
