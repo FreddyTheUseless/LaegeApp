@@ -6,49 +6,54 @@ class DoctorAppointment extends StatelessWidget {
     @required this.screenSize,
     this.name,
     this.imageUrl,
+    this.onTap,
   });
 
   final Size screenSize;
   final String name;
   final String imageUrl;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
-      width: screenSize.width,
-      height: screenSize.height * 0.1,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(25.0),
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 6.0,
-            color: Colors.black26,
-            offset: Offset(0, 3),
-            spreadRadius: 2.0,
-          ),
-        ],
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Text(
-            name,
-            style: TextStyle(
-              fontSize: 20.0,
-              color: Color(0xFF767676),
-              fontWeight: FontWeight.w600,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
+        width: screenSize.width,
+        height: screenSize.height * 0.1,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(25.0),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 6.0,
+              color: Colors.black26,
+              offset: Offset(0, 3),
+              spreadRadius: 2.0,
             ),
-          ),
-          CircleAvatar(
-            backgroundImage: NetworkImage(
-              imageUrl,
+          ],
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text(
+              name,
+              style: TextStyle(
+                fontSize: 20.0,
+                color: Color(0xFF767676),
+                fontWeight: FontWeight.w600,
+              ),
             ),
-            radius: 30.0,
-          ),
-        ],
+            CircleAvatar(
+              backgroundImage: NetworkImage(
+                imageUrl,
+              ),
+              radius: 30.0,
+            ),
+          ],
+        ),
       ),
     );
   }

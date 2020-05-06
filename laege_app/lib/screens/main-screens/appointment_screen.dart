@@ -29,6 +29,7 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Mie Xing',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2017/01/29/21/16/nurse-2019420_960_720.jpg',
+              onTap: () {},
             ),
             SizedBox(height: screenSize.height * 0.05),
             DoctorAppointment(
@@ -36,6 +37,7 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Mads Sørensen',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2017/05/23/17/12/doctor-2337835_960_720.jpg',
+              onTap: () {},
             ),
             SizedBox(height: screenSize.height * 0.05),
             DoctorAppointment(
@@ -43,6 +45,7 @@ class AppointmentScreen extends StatelessWidget {
               name: 'Sarah Jensen',
               imageUrl:
                   'https://cdn.pixabay.com/photo/2019/12/06/13/40/anesthesia-4677401_960_720.jpg',
+              onTap: () {},
             ),
           ],
         ),
