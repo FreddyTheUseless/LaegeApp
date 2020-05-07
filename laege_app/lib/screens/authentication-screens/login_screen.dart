@@ -12,9 +12,9 @@ import '../main-screens/main_screen.dart';
 class LoginScreen extends StatelessWidget {
   static const routeName = '/login-screen';
 
-  TextEditingController cprController = TextEditingController();
-  TextEditingController usrController = TextEditingController();
-  TextEditingController pwController = TextEditingController();
+  final TextEditingController cprController = TextEditingController();
+  final TextEditingController usrController = TextEditingController();
+  final TextEditingController pwController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -12,10 +12,10 @@ import '../main-screens/main_screen.dart';
 class RegisterScreen extends StatelessWidget {
   static const routeName = '/register-screen';
 
-  TextEditingController cprController = TextEditingController();
-  TextEditingController tlfController = TextEditingController();
-  TextEditingController usrController = TextEditingController();
-  TextEditingController pwController = TextEditingController();
+  final TextEditingController cprController = TextEditingController();
+  final TextEditingController tlfController = TextEditingController();
+  final TextEditingController usrController = TextEditingController();
+  final TextEditingController pwController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
