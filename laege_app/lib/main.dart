@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Laege App',
       debugShowCheckedModeBanner: false,
-      initialRoute: LaunchScreen.routeName,
+      initialRoute: DoctorHomeScreen.routeName,
       theme: ThemeData.dark(),
       routes: {
         LaunchScreen.routeName: (context) => LaunchScreen(),

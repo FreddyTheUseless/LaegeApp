@@ -1,16 +1,20 @@
 // * Packages
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 // * Components
 import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
 import 'package:laege_app/components/main_screen_components/appointment_title.dart';
 // * Screens
 import 'package:laege_app/screens/main-screens/rapport_screen_all.dart';
+=======
+>>>>>>> parent of 3147dfe... wdwadw
 
 class RapportScreen extends StatelessWidget {
   static const routeName = '/rapport-screen';
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -83,6 +87,9 @@ class RapportScreen extends StatelessWidget {
         ),
       ),
     );
+=======
+    return Scaffold();
+>>>>>>> parent of 3147dfe... wdwadw
   }
 }
 
