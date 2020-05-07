@@ -79,6 +79,9 @@ class LoginScreen extends StatelessWidget {
                 print('User:' + usrController.text);
                 print('Password:' + pwController.text);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 82f0349... Update login_screen.dart
+=======
 >>>>>>> parent of 82f0349... Update login_screen.dart
 =======
 >>>>>>> parent of 82f0349... Update login_screen.dart
