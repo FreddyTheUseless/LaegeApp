@@ -32,7 +32,7 @@ class RapportScreen extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     Container(
-                      width: screenSize.width * 0.2,
+                      width: screenSize.width * 0.21,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20.0),
                         color: Color(0xff6f909f),

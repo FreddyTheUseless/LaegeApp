@@ -32,7 +32,10 @@ class DoctorHomeScreen extends StatelessWidget {
                   'https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
               name: 'Gustav Walker Petersen',
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AboutPatientScreen(patientName: 'Gustav Walker Petersen',)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AboutPatientScreen(
+                          patientName: 'Gustav Walker Petersen',
+                        )));
               },
             ),
             SizedBox(height: screenSize.height * 0.03),
@@ -42,7 +45,10 @@ class DoctorHomeScreen extends StatelessWidget {
                   'https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
               name: 'Fake Fakesen',
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AboutPatientScreen(patientName: 'Fake Fakesen',)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AboutPatientScreen(
+                          patientName: 'Fake Fakesen',
+                        )));
               },
             ),
             SizedBox(height: screenSize.height * 0.03),
@@ -52,16 +58,23 @@ class DoctorHomeScreen extends StatelessWidget {
                   'https://soundvenue.com/wp-content/uploads/2016/09/Daniel-Craig-James-Bond-640x640.jpg',
               name: 'James Bond',
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AboutPatientScreen(patientName: 'James Bond',)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AboutPatientScreen(
+                          patientName: 'James Bond',
+                        )));
               },
             ),
             SizedBox(height: screenSize.height * 0.03),
             DoctorAppointment(
               screenSize: screenSize,
-              imageUrl: 'https://vignette.wikia.nocookie.net/harrypotter/images/9/97/Harry_Potter.jpg/revision/latest?cb=20150811193929&path-prefix=da',
+              imageUrl:
+                  'https://vignette.wikia.nocookie.net/harrypotter/images/9/97/Harry_Potter.jpg/revision/latest?cb=20150811193929&path-prefix=da',
               name: 'Harry James Potter',
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => AboutPatientScreen(patientName: 'Harry James Potter',)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => AboutPatientScreen(
+                          patientName: 'Harry James Potter',
+                        )));
               },
             ),
           ],

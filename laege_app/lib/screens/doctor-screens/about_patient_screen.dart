@@ -1,9 +1,12 @@
 // * Packages
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+// * Components
 import 'package:laege_app/components/doctor_components/request_meeting_button.dart';
 import 'package:laege_app/components/doctor_components/top_doctor_name.dart';
 import 'package:laege_app/components/launch_screen_components/top_app_title.dart';
+// * Screens
+import 'package:laege_app/screens/doctor-screens/call_screen.dart';
 
 class AboutPatientScreen extends StatelessWidget {
   AboutPatientScreen({
@@ -46,6 +49,7 @@ class AboutPatientScreen extends StatelessWidget {
               screenSize: screenSize,
               appointmentTitle: 'Corona Tjek',
               date: '15:10 - 6. Maj / 2020',
+              patientName: patientName,
             ),
           ],
         ),
@@ -59,11 +63,13 @@ class AppointmentWidget extends StatelessWidget {
     @required this.screenSize,
     this.appointmentTitle,
     this.date,
+    this.patientName,
   });
 
   final Size screenSize;
   final String appointmentTitle;
   final String date;
+  final String patientName;
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +116,16 @@ class AppointmentWidget extends StatelessWidget {
             ],
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              // * GO To Call Screen
+              Navigator.push(
+                context,
+                new MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      new CallScreen(patientName),
+                ),
+              );
+            },
             child: Icon(
               CupertinoIcons.video_camera_solid,
               size: 50,

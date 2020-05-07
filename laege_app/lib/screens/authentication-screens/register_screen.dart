@@ -73,7 +73,7 @@ class RegisterScreen extends StatelessWidget {
               obscureText: true,
               textController: pwController,
             ),
-            SizedBox(height: screenSize.height * 0.2),
+            SizedBox(height: screenSize.height * 0.17),
             RegisterButton(
               screenSize: screenSize,
               onTap: () {

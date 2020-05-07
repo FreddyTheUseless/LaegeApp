@@ -1,5 +1,6 @@
 // * Packages
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 // * Screens
 import './screens/authentication-screens/launch_screen.dart';
 import './screens/authentication-screens/register_screen.dart';
@@ -10,17 +11,22 @@ import './screens/main-screens/rapport_screen.dart';
 import './screens/main-screens/rapport_screen_all.dart';
 import './screens/doctor-screens/doctor_home_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.black,
+    ));
     return MaterialApp(
       title: 'Laege App',
       debugShowCheckedModeBanner: false,
       initialRoute: LaunchScreen.routeName,
-      theme: ThemeData.dark(),
+      theme: ThemeData.light(),
       routes: {
         LaunchScreen.routeName: (context) => LaunchScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
