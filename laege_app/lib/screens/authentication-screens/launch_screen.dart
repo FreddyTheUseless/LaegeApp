@@ -1,5 +1,6 @@
 // * Packages
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 // * Components
 import '../../components/launch_screen_components/top_app_title.dart';
 import '../../components/launch_screen_components/launch_screen_text.dart';
