@@ -68,12 +68,10 @@ class LoginScreen extends StatelessWidget {
             LoginButton(
               screenSize: screenSize,
               onTap: () {
-                // * Do something
-                print('CPR:' + cprController.text);
-                print('User:' + usrController.text);
-                print('Password:' + pwController.text);
                 if (pwController.text.toLowerCase() == 'freddy') {
-                  Navigator.pushReplacementNamed(context, DoctorHomeScreen.routeName);
+                  Navigator.pushReplacementNamed(
+                      context, DoctorHomeScreen.routeName);
+                  return;
                 }
                 Navigator.pushReplacementNamed(context, MainScreen.routeName);
               },
