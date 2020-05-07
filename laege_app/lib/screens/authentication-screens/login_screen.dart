@@ -5,7 +5,6 @@ import 'package:laege_app/components/launch_screen_components/top_app_title.dart
 import 'package:laege_app/components/login_screen_components/login_button.dart';
 import 'package:laege_app/components/login_screen_components/login_screen_text.dart';
 import 'package:laege_app/components/register_screen_components/register_text_field.dart';
-import 'package:laege_app/screens/doctor-screens/doctor_home_screen.dart';
 // * Screens
 import '../main-screens/main_screen.dart';
 
@@ -68,11 +67,18 @@ class LoginScreen extends StatelessWidget {
             LoginButton(
               screenSize: screenSize,
               onTap: () {
+<<<<<<< HEAD
                 if (pwController.text.toLowerCase() == 'freddy') {
                   Navigator.pushReplacementNamed(
                       context, DoctorHomeScreen.routeName);
                   return;
                 }
+=======
+                // * Do something
+                print('CPR:' + cprController.text);
+                print('User:' + usrController.text);
+                print('Password:' + pwController.text);
+>>>>>>> parent of 82f0349... Update login_screen.dart
                 Navigator.pushReplacementNamed(context, MainScreen.routeName);
               },
             ),
