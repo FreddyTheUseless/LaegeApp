@@ -78,6 +78,9 @@ class LoginScreen extends StatelessWidget {
                 print('CPR:' + cprController.text);
                 print('User:' + usrController.text);
                 print('Password:' + pwController.text);
+<<<<<<< HEAD
+>>>>>>> parent of 82f0349... Update login_screen.dart
+=======
 >>>>>>> parent of 82f0349... Update login_screen.dart
                 Navigator.pushReplacementNamed(context, MainScreen.routeName);
               },
