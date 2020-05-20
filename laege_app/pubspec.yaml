@@ -18,12 +18,23 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.7.3"
+  flutter_launcher_name: "^0.0.1"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
+
+flutter_launcher_name:
+  name: "MDoctor"
 
 flutter:
   uses-material-design: true
 
   assets:
     - assets/images/baggrund.png
+    - assets/images/icon.png
   # fonts:
   #   - family: Schyler
   #     fonts:
